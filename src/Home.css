@@ -1,0 +1,149 @@
+/* Home.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0; /* Reset default body margin */
+  padding: 0; /* Reset default body padding */
+  background-color: #f4f4f4;
+}
+
+.home-page {
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+.hero-section {
+  position: relative;
+  width: 100vw;
+  height: 1080px;
+  overflow: hidden;
+}
+
+.hero-image {
+  position: absolute; /* Crucial for positioning within the hero section */
+  top: 0;
+  left: 0;
+  width: 100%;  /* Image takes the full width of its parent */
+  height: 100%; /* Image takes the full height of its parent */
+  object-fit: cover; /* Maintain aspect ratio and cover the entire area */
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0; /* Ensure it starts from the left edge */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px; /* Keep some padding inside the navbar */
+  color: white;
+  z-index: 10; /* Above the image */
+}
+
+.navbar-left .site-title {
+  margin: 0;
+  font-size: 24px;
+  color: white;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navbar-right {
+  /* display: flex; ALREADY IMPLIED BY PARENT */
+  align-items: center;
+}
+
+.navbar-right .track-progress {
+  background-color: #F4791F;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.track-progress:hover {
+  background-color: #F4791F;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  width: 90%; /* Add this to ensure text has enough width */
+  max-width: 1200px; /* Prevent excessive width on large screens */
+}
+
+.hero-text h2 {
+  font-size: 4rem; /* Use relative units instead of fixed pixels */
+  margin: 0 0 0.5rem 0; /* Add some bottom margin */
+  font-weight: bold;
+  line-height: 1.2; /* Add line height for better spacing */
+}
+
+.hero-text p {
+  font-size: 1.5rem; /* Use relative units */
+  margin-top: 15px;
+  font-weight: 300;
+  line-height: 1.4; /* Add line height */
+}
+
+.bmi-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+}
+
+.bmi-image {
+  width: 90%;
+  max-width: 800px;
+  border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+  .navbar-left {
+    margin-bottom: 10px;
+  }
+  .navbar-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .navbar-right {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .navbar-right .track-progress {
+    margin-left: 0;
+    width: 100%;
+  }
+  .hero-text h2 {
+    font-size: 40px;
+  }
+  .hero-text p {
+    font-size: 20px;
+  }
+}
