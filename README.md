@@ -1,5 +1,5 @@
 # Overview
-CareMate is a healthcare web application designed to help users understand their health status through BMI analysis, personalized exercise recommendations, meal planning, and an AI-powered health assistant.
+# CareMate is a healthcare web application designed to help users understand their health status through BMI analysis, personalized exercise recommendations, meal planning, and an AI-powered health assistant.
 
 The platform provides simple, easy-to-understand health insights and encourages users to build healthier daily habits through personalized guidance.
 
